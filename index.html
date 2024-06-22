@@ -1,2 +1,59 @@
 <Br><H1> Hi there! </H1><Br>
 <H4>Hello! my name is Sk Sadiq Razzaq I am pursuing BCA in Sri Y.N.College at Narasapuram.<H4>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar System Animation</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+    }
+    .sun {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border-radius: 50%;
+        position: relative;
+        animation: rotate 10s linear infinite;
+    }
+    .planet {
+        width: 20px;
+        height: 20px;
+        background-color: #3498db;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        animation: orbit 5s linear infinite;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes orbit {
+        from {
+            transform: rotate(0deg) translateX(50px) rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg) translateX(50px) rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="sun">
+    <div class="planet"></div>
+</div>
+</body>
+</html>
